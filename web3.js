@@ -52,7 +52,7 @@ $(function () {
         getAccount();
       }).on("click", ".nft-item", function(e){
         e.preventDefault();
-        NFT_QNT = parseInt($(this).data('nft'));
+        NFT_QNT = parseInt($('#nft').find(":selected").text(););
       });
       
       // Page Reload Handling
