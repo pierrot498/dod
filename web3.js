@@ -1,6 +1,11 @@
 var accountID, networkId, web3, NFT_QNT, isPresaleActive, contract, nftPrice, totalSupply;
 
 var contractAddress = "0x79181C32D5539d18F239Ed9ab304132478845631"; //mainnet updated contract
+var buyButtonId="buyBtn" //handleBuy
+var idConnect="#connectServer"
+var classNumberItems=".nft-item"
+var classConnectButton=".connect-btn"
+var idOngoingCount="max_nft"
 
 var nftPriceInEthGb = 0.0;
 function sleep(ms) {
@@ -88,9 +93,9 @@ $(function () {
     async function connectContract(accountID) {
 
       contract = new web3.eth.Contract(abi, contractAddress);
-      var max_nft = parseInt(await contract.methods.MAX_NFT_PUBLIC().call())+180;
+      var max_nft = parseInt(await contract.methods.MAX_NFT_PUBLIC().call());
       console.log("max_nft",max_nft)
-      totalSupply = parseInt(await contract.methods.totalSupply().call())+180;
+      totalSupply = parseInt(await contract.methods.totalSupply().call());
       console.log("totalSupply",totalSupply)
       var buyLimit = await contract.methods.BUY_LIMIT_PER_TX().call();
       var isActive = await contract.methods.isActive().call();
@@ -99,13 +104,13 @@ $(function () {
       console.log("isPresaleActive",isPresaleActive)
       console.log("isActive",isActive)
       if (isPresaleActive == true) {
-        document.getElementById("heading").title = "PRESALE IS OPEN";
-        document.getElementById("heading").innerHTML = "PRESALE IS OPEN";
+       // document.getElementById("heading").title = "PRESALE IS OPEN";
+       // document.getElementById("heading").innerHTML = "PRESALE IS OPEN";
       }
       if (isPresaleActive == false && isActive==false) {
-        document.getElementById("heading").title = "SALE NOT OPEN";
-        document.getElementById("heading").innerHTML = "SALE NOT OPEN";
-        document.getElementById("buyBtn").style.display="none"
+       // document.getElementById("heading").title = "SALE NOT OPEN";
+       // document.getElementById("heading").innerHTML = "SALE NOT OPEN";
+        //document.getElementById("buyBtn").style.display="none"
         
       }
       
@@ -122,11 +127,11 @@ $(function () {
        
         progress = (totalSupply * 100) / max_nft;
         progress2 = progress.toFixed(2);
-        document.getElementById("file").value = progress2;
-        document.getElementById("progressPercent").innerHTML = progress2 + "%";
+        //document.getElementById("file").value = progress2;
+        //document.getElementById("progressPercent").innerHTML = progress2 + "%";
         document.getElementById("max_nft").innerHTML = totalSupply + " / "+max_nft; //+ max_nft ;
         await sleep(2000);
-        totalSupply = parseInt(await contract.methods.totalSupply().call())+180;
+        totalSupply = parseInt(await contract.methods.totalSupply().call());
       }
     }
 
