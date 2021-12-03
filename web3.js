@@ -1,1 +1,203 @@
-const abi = [{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[],"name":"BUY_LIMIT_PER_TX","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"MAX_NFT","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"NFTPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address[]","name":"_addresses","type":"address[]"}],"name":"addToAllowList","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_owner","type":"address"}],"name":"allowListClaimedBy","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"allowListMaxMint","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"isActive","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"isAllowListActive","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_numOfTokens","type":"uint256"}],"name":"mintNFT","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_numOfTokens","type":"uint256"}],"name":"mintNFTAllowList","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"addr","type":"address"}],"name":"onAllowList","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address[]","name":"_addresses","type":"address[]"}],"name":"removeFromAllowList","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"reveal","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"revealNow","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_maxMint","type":"uint256"}],"name":"setAllowListMaxMint","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_limit","type":"uint256"}],"name":"setBuyLimitPerTransaction","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bool","name":"_isActive","type":"bool"}],"name":"setIsActive","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bool","name":"_isAllowListActive","type":"bool"}],"name":"setIsAllowListActive","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_maxNFT","type":"uint256"}],"name":"setMaxNFT","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_blindURI","type":"string"},{"internalType":"string","name":"_URI","type":"string"}],"name":"setURIs","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenOfOwnerByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_to","type":"address"}],"name":"withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"}]
+var accountID, networkId, web3, NFT_QNT, isPresaleActive, contract, nftPrice, totalSupply;
+
+var contractAddress = "0x79181C32D5539d18F239Ed9ab304132478845631"; //mainnet updated contract
+NFT_QNT=2;
+var nftPriceInEthGb = 0.0;
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+$(function () {
+
+  try {
+
+    // Mint Handling
+    var buyButton = document.getElementById("buyBtn");
+    buyButton.addEventListener("click", handleBuy);
+    
+    // Create Web3 Provider
+    web3 = new Web3(Web3.givenProvider);
+    
+    // If Metamask is not installed
+    if (typeof ethereum === "undefined") {
+      console.log("Please install MetaMask extension!");
+      alert("Please install Metamask");
+    } else {
+
+      // Account Changed Event Handling
+      window.ethereum.on("accountsChanged", function (accounts) {
+        //$.cookie("MetaMask", "");
+        $(".connect-btn").html("CONNECT WALLET");
+        console.log("Account Changed")
+      });
+
+      // Connect Button Callback, Just logs
+      window.ethereum.on("connect", function (accounts) {
+        console.log("connect")
+      });
+
+      // on Network ID change
+      window.ethereum.on("chainChanged", function (networkId) {
+        //$.cookie("MetaMask", "");
+        window.location.reload(true);
+      });
+
+      // Click to Metamask Connect
+      $(document).on("click", "#connectServer", function (e) {       
+        e.preventDefault();
+        getAccount();
+      }).on("click", ".nft-item", function(e){
+        e.preventDefault();
+        NFT_QNT = parseInt($('#nft').find(":selected").text());
+      });
+      
+      // Page Reload Handling
+      /*if ( typeof $.cookie("MetaMask") !== "undefined" && $.cookie("MetaMask") == "true" ) {
+        getAccount();
+      }*/
+
+      // Get Account from Metamask
+      async function getAccount() {
+          const accounts = await ethereum.request({
+            method: "eth_requestAccounts",
+          }).catch((err) => {
+            alert(err.message);
+          });
+
+          accountID = accounts[0];          
+          // Get Current Blockchain
+          await web3.eth.net.getId().then(function (id) {
+            networkId = id;
+          });
+          
+          if (networkId == 1) {
+            $(".connect-btn").html( accountID.substring(1, 9) + "..." + accountID.substring(accountID.length - 6));
+            await web3.eth.getBalance(accountID).then(function (balance) {
+                accountBalance = balance;
+            });
+            //$.cookie("MetaMask", "true");
+            web3.eth.defaultAccount = accountID;
+            connectContract(accountID);
+          } else {
+            alert("Please change your network to Ethereum Mainnet!");
+          }
+        }
+
+    }
+      
+    // Smart Contract Connection
+    async function connectContract(accountID) {
+
+      contract = new web3.eth.Contract(abi, contractAddress);
+      var max_nft = 8888;//parseInt(await contract.methods.MAX_NFT_PUBLIC().call())+180;
+      console.log("max_nft",max_nft)
+      totalSupply = parseInt(await contract.methods.totalSupply().call())+200;
+      console.log("totalSupply",totalSupply)
+      var buyLimit = await contract.methods.BUY_LIMIT_PER_TX().call();
+      var isActive = await contract.methods.isActive().call();
+      console.log("buyLimit",buyLimit)
+      isPresaleActive = await contract.methods.isPresaleActive().call();
+      console.log("isPresaleActive",isPresaleActive)
+      console.log("isActive",isActive)
+      if (isPresaleActive == true) {
+        document.getElementById("heading").innerHTML = "PRESALE IS OPEN";
+      }
+      if (isPresaleActive == false && isActive==false) {
+        document.getElementById("heading").innerHTML = "SALE NOT OPEN";
+        document.getElementById("buyBtn").style.display="none"
+        
+      }
+      
+      var progress = (totalSupply * 100) / max_nft;
+      var progress2 = progress.toFixed(2);
+    
+      nftPrice = await contract.methods.NFTPrice().call();
+      
+      var nftPriceInEth = await web3.utils.fromWei(nftPrice, "ether");
+
+      nftPriceInEthGb = nftPriceInEth;
+      
+      while(true){
+       
+        progress = (totalSupply * 100) / max_nft;
+        progress2 = progress.toFixed(2);
+       // document.getElementById("file").value = progress2;
+        //document.getElementById("progressPercent").innerHTML = progress2 + "%";
+        document.getElementById("max_nft").innerHTML = totalSupply + " / "+max_nft; //+ max_nft ;
+        await sleep(2000);
+        totalSupply = parseInt(await contract.methods.totalSupply().call())+200;
+      }
+    }
+
+    //Minting Functionality
+    async function handleBuy(e) {
+      e.preventDefault();
+
+      if ( $(".connect-btn").text().includes("x") ){
+
+        const isActive = await contract.methods.isActive().call();
+        console.log("isActive : ",isActive)
+        console.log("isPresaleActive : ",isPresaleActive)
+        if (isActive == true) {
+
+          if (isPresaleActive == true) {
+
+            const whiteListMaxMint = await contract.methods.WHITELIST_MAX_MINT().call();
+            console.log("whiteListMaxMint : ",whiteListMaxMint)
+            var noOfTokens = NFT_QNT;
+            console.log("nftPrice : ",nftPrice)
+            var value1 = parseInt(nftPrice);
+
+            if (noOfTokens < 1 || noOfTokens == undefined) {
+              alert("Select at least 1 NFT!");
+            } else if (noOfTokens > whiteListMaxMint) {
+              alert("Buy limit for presale is : " + whiteListMaxMint);
+            } else if (totalSupply >= max_nft) {
+              alert("Sold out!");
+            } else {
+              const proof = await GetMerkleProof(accountID);
+              await contract.methods.mintNFTDuringPresale(noOfTokens,proof).send({ from: accountID, value: value1 * noOfTokens })
+              .on("receipt", function (res) {
+                alert("Transaction successful");
+                location.reload();
+              }).on("error", function (err) {
+                alert("Transaction Error");
+              });
+            }
+
+          } else {
+
+            var noOfTokens = NFT_QNT;
+            console.log("nftPrice : ",nftPrice)
+            var value1 = parseInt(nftPrice);
+      
+            if (noOfTokens < 1 || noOfTokens == undefined) {
+              alert("Select at least 1 NFT!");
+            } else if (totalSupply >= max_nft) {
+              alert("Sold out!");
+            } else {
+              await contract.methods.mintNFT(noOfTokens).send({ from: accountID, value: value1 * noOfTokens })
+              .on("receipt", function (res) {
+                alert("Transaction successful");
+                location.reload();
+              }).on("error", function (err) {
+                alert("Transaction Error");
+              });
+            }
+
+          }
+
+        } else {
+          alert("Sale is not active yet!");
+        }
+
+      }else{
+        alert("Connect wallet first!");
+      }
+
+    }
+
+  } catch (err) {
+    console.log("Error:", err.message);
+  }
+
+});
