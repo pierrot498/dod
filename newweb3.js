@@ -40,7 +40,9 @@ $(function () {
         //$.cookie("MetaMask", "");
         window.location.reload(true);
       });
-
+      $('#nft').on('change', function() { NFT_QNT = parseInt(this.value);
+                                        
+                                        })
       // Click to Metamask Connect
       $(document).on("click", "#connectServer", function (e) {       
         e.preventDefault();
