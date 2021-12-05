@@ -135,7 +135,7 @@ $(function () {
       e.preventDefault();
       
       if ( $(".connect-btn").text().includes("x") ){
-        if(accountBalance>=nftPrice*NFT_QNT){
+        if(accountBalance<=nftPrice*NFT_QNT){
             alert("insufficient funds");
             }else{
 
