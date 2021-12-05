@@ -133,9 +133,13 @@ $(function () {
     //Minting Functionality
     async function handleBuy(e) {
       e.preventDefault();
-
+      
       if ( $(".connect-btn").text().includes("x") ){
+        if(accountBalance>=nftPrice*NFT_QNT){
+            alert("insufficient funds");
+            }else{
 
+           
         const isActive = await contract.methods.isActive().call();
         console.log("isActive : ",isActive)
         console.log("isPresaleActive : ",isPresaleActive)
@@ -157,6 +161,9 @@ $(function () {
               alert("Sold out!");
             } else {
               const proof = await GetMerkleProof(accountID);
+              if(proof==[]){
+                alert("Not in whitelist")
+              }else{
               await contract.methods.mintNFTDuringPresale(noOfTokens,proof).send({ from: accountID, value: value1 * noOfTokens })
               .on("receipt", function (res) {
                 alert("Transaction successful");
@@ -164,6 +171,7 @@ $(function () {
               }).on("error", function (err) {
                 alert("Transaction Error");
               });
+              }
             }
 
           } else {
@@ -191,7 +199,7 @@ $(function () {
         } else {
           alert("Sale is not active yet!");
         }
-
+            }
       }else{
         alert("Connect wallet first!");
       }
