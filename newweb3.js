@@ -101,11 +101,11 @@ $(function () {
       console.log("isPresaleActive",isPresaleActive)
       console.log("isActive",isActive)
       if (isPresaleActive == true) {
-        document.getElementById("heading").innerHTML = "PRESALE IS OPEN";
+      //  document.getElementById("heading").innerHTML = "PRESALE IS OPEN";
       }
       if (isPresaleActive == false && isActive==false) {
-        document.getElementById("heading").innerHTML = "SALE NOT OPEN";
-        document.getElementById("buyBtn").style.display="none"
+       // document.getElementById("heading").innerHTML = "SALE NOT OPEN";
+       // document.getElementById("buyBtn").style.display="none"
         
       }
       
