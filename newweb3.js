@@ -90,7 +90,7 @@ $(function () {
     async function connectContract(accountID) {
 
       contract = new web3.eth.Contract(abi, contractAddress);
-      var max_nft = 8888;//parseInt(await contract.methods.MAX_NFT_PUBLIC().call())+180;
+      var max_nft = 8999;//parseInt(await contract.methods.MAX_NFT_PUBLIC().call())+180;
       console.log("max_nft",max_nft)
       totalSupply = parseInt(await contract.methods.totalSupply().call())+200;
       console.log("totalSupply",totalSupply)
