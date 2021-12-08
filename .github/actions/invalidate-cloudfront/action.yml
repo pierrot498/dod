@@ -40,4 +40,4 @@ runs:
     - name: Invalidate CloudFront cache
       shell: bash
       run: |
-        aws cloudfront create-invalidation --distribution-id ${{ inputs.distribution }} --paths ${{ inputs.paths }}
+        aws cloudfront create-invalidation --distribution-id ${{ inputs.distribution }} --paths "${{ inputs.paths }}"
